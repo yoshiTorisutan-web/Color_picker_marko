@@ -1,19 +1,18 @@
 {
   "name": "color-picker-tutorial",
-  "description": "The default Marko starter app",
+  "description": "Color Picker",
   "version": "1.0.0",
-  "type": "module",
   "dependencies": {
-    "marko": "^5.31.17"
+    "marko": "^5.32.3"
   },
   "devDependencies": {
-    "@marko/run": "^0.3.0"
+    "@marko/build": "^4",
+    "@marko/serve": "^4"
   },
   "private": true,
   "scripts": {
-    "dev": "marko-run",
-    "build": "marko-run build",
-    "preview": "marko-run preview",
-    "start": "node --enable-source-maps ./dist/index.mjs"
+    "build": "marko-build ./src/pages",
+    "dev": "marko-serve ./src/pages",
+    "start": "NODE_ENV=production node ./build/index.js"
   }
 }

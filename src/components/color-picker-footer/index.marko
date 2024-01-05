@@ -1,0 +1,17 @@
+<div class="color-picker-footer">
+    <div class="color-picker-selection-container">
+        <for|color| of=input.colors>
+            <div>
+                <color-picker-selection
+                    color=color
+                    on-color-selected("handleColorSelected", color)
+                />
+            </div>
+        </for>
+        <input
+            key="hexInput"
+            placeholder="Hex value"
+            on-input("handleHexInput")
+        >
+    </div>
+</div>
